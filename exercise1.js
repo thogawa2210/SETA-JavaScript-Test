@@ -33,6 +33,7 @@ function findIndexOfMostAppear (arr){
 }
 
 function findAppearMost (arr){
+    if(arr.length === 0) return null;
     const stringLengthArr = stringLengthList(arr);
     const countArr = countLengthArray(arr,stringLengthArr);
     const indexOfMostAppear = findIndexOfMostAppear(countArr);
