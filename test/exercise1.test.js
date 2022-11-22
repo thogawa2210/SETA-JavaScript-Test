@@ -1,4 +1,4 @@
-const findAppearMost = require( './exercise1.js');
+const findAppearMost = require( '../exercise/exercise1.js');
 
 const arr1 = ["a", "ab", "abc", "cd", "def", "gh"];
 const result1 = ["ab", "cd","gh"];
