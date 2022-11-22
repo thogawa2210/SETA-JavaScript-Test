@@ -36,7 +36,7 @@ function findAppearMost (arr){
     if(arr.length === 0){
         return null;
     } else if(arr.length === 1){
-        return arr[0];
+        return arr;
     }else{
         const stringLengthArr = stringLengthList(arr);
         const countArr = countLengthArray(arr,stringLengthArr);
