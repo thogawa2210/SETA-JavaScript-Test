@@ -2,8 +2,8 @@ const findAppearMost = require( '../exercise/exercise1.js');
 
 const arr1 = ["a", "ab", "abc", "cd", "def", "gh"];
 const result1 = ["ab", "cd","gh"];
-const arr2 = ["aa", "ab", "abc", "cd", "def", "gh"];
-const result2 = ["aa","ab", "cd","gh"];
+const arr2 = ["aa", "ab", "abc", "cd", "def", "ghi"];
+const result2 = [["aa","ab", "cd"],["abc", 'def', "ghi"]];
 const arr3 = ["a", "ab", "abc", "cd", "def", "gh", "ik", "ghi"];
 const result3 = ["ab", "cd","gh", "ik"];
 const arr4 = ["ayz", "ab", "abc", "cd", "def", "gh", "ghi", "lmn"];

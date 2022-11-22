@@ -29,26 +29,50 @@ function findIndexOfMostAppear (arr){
             max = arr[i];
         }
     }
-    return arr.indexOf(max);
+    let list = [];
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === max) {
+            list.push(i);
+        }
+    }
+    return list;
 }
 
 function findAppearMost (arr){
     if(arr.length === 0){
         return null;
     } else if(arr.length === 1){
-        return arr;
+        return arr[0];
     }else{
         const stringLengthArr = stringLengthList(arr);
         const countArr = countLengthArray(arr,stringLengthArr);
-        const indexOfMostAppear = findIndexOfMostAppear(countArr);
-        const stringLengthAppearMost = stringLengthArr[indexOfMostAppear];
-        let result = [];
-        for (let i = 0; i < arr.length; i++) {
-            if(arr[i].length === stringLengthAppearMost){
-                result.push(arr[i]);
+        const listIndexOfMostAppear = findIndexOfMostAppear(countArr);
+        if(listIndexOfMostAppear.length === 1){
+            const stringLengthAppearMost = stringLengthArr[listIndexOfMostAppear[0]];
+            let result = [];
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i].length === stringLengthAppearMost){
+                    result.push(arr[i]);
+                }
             }
+            return result;
+        }else{
+            let stringLengthAppearMost = [];
+            for (let i = 0; i < listIndexOfMostAppear.length; i++) {
+                stringLengthAppearMost.push(stringLengthArr[listIndexOfMostAppear[i]])
+            }
+            let result = [];
+            for (let i = 0; i < stringLengthAppearMost.length; i++) {
+                let listStringByLength = [];
+                for (let j = 0; j <arr.length; j++) {
+                    if(arr[j].length === stringLengthAppearMost[i]) {
+                        listStringByLength.push(arr[j])
+                    }
+                }
+                result.push(listStringByLength);
+            }
+            return result;
         }
-        return result;
     }
 }
 
