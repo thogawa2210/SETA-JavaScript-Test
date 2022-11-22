@@ -57,15 +57,15 @@ function findAppearMost (arr){
             }
             return result;
         }else{
-            let stringLengthAppearMost = [];
+            let listStringLengthAppearMost = [];
             for (let i = 0; i < listIndexOfMostAppear.length; i++) {
-                stringLengthAppearMost.push(stringLengthArr[listIndexOfMostAppear[i]])
+                listStringLengthAppearMost.push(stringLengthArr[listIndexOfMostAppear[i]])
             }
             let result = [];
-            for (let i = 0; i < stringLengthAppearMost.length; i++) {
+            for (let i = 0; i < listStringLengthAppearMost.length; i++) {
                 let listStringByLength = [];
                 for (let j = 0; j <arr.length; j++) {
-                    if(arr[j].length === stringLengthAppearMost[i]) {
+                    if(arr[j].length === listStringLengthAppearMost[i]) {
                         listStringByLength.push(arr[j])
                     }
                 }
